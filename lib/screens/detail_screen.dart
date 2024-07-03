@@ -109,7 +109,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 },
               ),
               const SizedBox(
-                height: 20,
+                height: 25,
               ),
               FutureBuilder(
                 future: episodes,
@@ -125,6 +125,13 @@ class _DetailScreenState extends State<DetailScreen> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               color: Colors.green[400],
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 5,
+                                  offset: const Offset(5, 5),
+                                  color: Colors.black.withOpacity(0.1),
+                                ),
+                              ],
                             ),
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
