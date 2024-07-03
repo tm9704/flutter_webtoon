@@ -26,32 +26,35 @@ class DetailScreen extends StatelessWidget {
         shadowColor: Colors.black,
         elevation: 2,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Column(
         children: [
-          Column(
+          const SizedBox(
+            height: 50,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: 50,
-              ),
-              Container(
-                width: 250,
-                clipBehavior: Clip.hardEdge,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 15,
-                      offset: const Offset(10, 10),
-                      color: Colors.black.withOpacity(0.3),
-                    )
-                  ],
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Image.network(
-                  thumb,
-                  headers: const {
-                    'Referer': 'https://comic.naver.com',
-                  },
+              Hero(
+                tag: id,
+                child: Container(
+                  width: 250,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 15,
+                        offset: const Offset(10, 10),
+                        color: Colors.black.withOpacity(0.3),
+                      )
+                    ],
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Image.network(
+                    thumb,
+                    headers: const {
+                      'Referer': 'https://comic.naver.com',
+                    },
+                  ),
                 ),
               ),
             ],
